@@ -4,36 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnLogWorkout"
+    <EditText
+        android:id="@+id/editChallengeName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Log Workout"
+        android:hint="Challenge Name"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnSetChallenge"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginBottom="16dp"/>
+        />
 
     <Button
         android:id="@+id/btnSetChallenge"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Set Challenge"
-        app:layout_constraintTop_toBottomOf="@id/btnLogWorkout"
-        app:layout_constraintBottom_toTopOf="@id/btnViewProgress"
+        app:layout_constraintTop_toBottomOf="@id/editChallengeName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/btnViewProgress"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="View Progress"
-        app:layout_constraintTop_toBottomOf="@id/btnSetChallenge"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

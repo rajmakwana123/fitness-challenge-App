@@ -1,24 +1,29 @@
 package com.example.fitnesschallenge
 
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val challengeText: TextView = findViewById(R.id.challengeText)
-        val startButton: Button = findViewById(R.id.startButton)
+        val btnLogWorkout = findViewById<Button>(R.id.btnLogWorkout)
+        val btnSetChallenge = findViewById<Button>(R.id.btnSetChallenge)
+        val btnViewProgress = findViewById<Button>(R.id.btnViewProgress)
 
-        startButton.setOnClickListener {
-            challengeText.text = "Challenge Started! Stay Active!"
+        btnLogWorkout.setOnClickListener {
+            startActivity(Intent(this, WorkoutActivity::class.java))
+        }
+
+        btnSetChallenge.setOnClickListener {
+            startActivity(Intent(this, ChallengeActivity::class.java))
+        }
+
+        btnViewProgress.setOnClickListener {
+            startActivity(Intent(this, ProgressActivity::class.java))
         }
     }
 }
